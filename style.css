@@ -1,0 +1,874 @@
+* {
+	margin: 0;
+	padding: 0; 
+}
+
+body, html {
+	background: #FFFCF5;
+}
+
+div.menu-wrapper{
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	background: #222222;
+	height: 100px;
+	color: #FFF;
+}
+
+div.menu{
+	margin: 0 auto;
+	width: 980px;
+	padding: 10px 0;
+	color: #FFFCF5;
+	overflow: hidden;
+	font-family: Georgia, "Times New Roman", Serif;
+}
+
+div.menu div.headers-wrapper{
+	overflow: hidden;
+	padding: 0 0 12px 0;
+}
+
+div.menu h2{
+	float: left;
+	font-size: 32px;
+}
+
+div.menu h4{
+	float: left;
+	padding: 11px 0 0 20px;
+	font-size: 19px;
+}
+
+div.menu div.level{
+	float: left;
+	padding-right: 26px;
+}
+
+div.menu a{
+	font-size: 20px;
+	color: #FFFCF5;
+	text-decoration: none;
+}
+
+div.menu a:hover{
+	text-decoration: underline;
+}
+
+div.game-wrapper{
+	width: 980px;
+	margin: 0 auto;
+}
+
+div.game{
+	padding: 160px 10px 10px 10px;
+	border-bottom: 2px solid #EB5055;
+}
+
+div.game:last-child{
+	border-bottom: none;
+}
+
+div.game.level1{
+	padding: 160px 10px 10px 10px;
+}
+
+div.game-area:after,
+div.block-wrapper:after{
+	clear:both;
+}
+
+div.game-area{
+	border: #EB5055 10px solid;
+	overflow: hidden;
+	margin: 0 auto;
+	box-shadow: 5px 0px 0px #BD3035, -5px 0px 0px #BD3035, 0px 5px 0px #BD3035, 0px -5px 0px #BD3035;
+}
+
+div.game.finished div.game-area{
+	border: #68C39F 10px solid;
+    box-shadow: 5px 0px 0px #25A278, -5px 0px 0px #25A278, 0px 5px 0px #25A278, 0px -5px 0px #25A278;
+}
+
+div.game-area>div{
+	width: 40px;
+	height: 40px;
+	float: left;
+	position: relative;
+}
+
+div.game-area div.x{
+	background: #FFF;
+}
+
+div.game-area div.y{
+	background: #FFFCF5;
+	outline: #EB5055 1px solid;
+}
+
+div.game.finished div.game-area div.y{
+	outline: #68C39F 1px solid;
+}
+
+div.block-wrapper{
+	margin: 40px auto;
+	overflow: hidden;
+}
+
+div.block {
+	position: relative;
+	float: left;
+	padding: 20px 0 0 20px;
+}
+
+div.draggable div{
+	position: absolute;
+	width: 0px !important; 
+	height: 0px !important;
+	z-index: 1;
+	cursor: move;
+}
+
+.no-pointer{
+	pointer-events: none;
+}
+
+/*Level 1*/
+
+div.level1 div.game-area{
+	width: 160px;
+} 
+
+div.level1 div.block-wrapper{
+	width: 440px;
+}
+
+/*Level 2*/
+
+div.level2 div.game-area{
+	width: 320px;
+} 
+
+div.level2 div.block-wrapper{
+	width: 540px;
+}
+
+/*Level 3*/
+
+div.level3 div.game-area{
+	width: 200px;
+} 
+
+div.level3 div.block-wrapper{
+	width: 500px;
+}
+
+/*Level 5*/
+
+div.level5 div.game-area{
+	width: 240px;
+} 
+
+div.level5 div.block-wrapper{
+	width: 630px;
+}
+
+/*Block 1*/
+div.block1{
+	width: 120px; 
+	height: 80px;
+}
+div.block1>div{
+	width: 120px; 
+	height: 80px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.c{
+	border: 20px ridge #F29513;
+}
+
+div.cblock1{
+	top: 0;
+	left: 0;
+}
+
+div.cblock2{
+	top: 0;
+	left: 40px;
+}
+
+div.cblock3{
+	top: 0;
+	left: 80px;
+}
+
+div.cblock4{
+	top: 40px;
+	left: 40px;
+}
+
+/*Block 2*/
+div.block2{
+	width: 80px; 
+	height: 80px;
+}
+div.block2>div{
+	width: 80px; 
+	height: 80px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.q{
+	border: 20px ridge #F0AFB0;
+}
+
+div.qblock1{
+	top: 0;
+	left: 40px;
+}
+
+div.qblock2{
+	top: 40px;
+	left: 40px;
+}
+
+div.qblock3{
+	top: 40px;
+	left: 0;
+}
+
+/*Block 3*/
+div.block3{
+	width: 80px; 
+	height: 80px;
+}
+div.block3>div{
+	width: 80px; 
+	height: 80px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.w{
+	border: 20px ridge #107BD5;
+}
+
+div.wblock1{
+	top: 0;
+	left: 0;
+}
+
+div.wblock2{
+	top: 40px;
+	left: 0;
+}
+
+div.wblock3{
+	top: 40px;
+	left: 40px;
+}
+
+/*Block 4*/
+div.block4{
+	width: 80px; 
+	height: 40px;
+}
+div.block4>div{
+	width: 80px; 
+	height: 40px;
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.b{
+	border: 20px ridge #C48BE5;
+}
+
+div.bblock1{
+	top: 0;
+	left: 0;
+}
+
+div.bblock2{
+	top: 0;
+	left: 40px;
+}
+
+/*Block 5*/
+div.block5,
+div.block5>div{
+	width: 160px; 
+	height: 80px;
+}
+div.block5>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.e{
+	border: 20px ridge #36E8AC;
+}
+
+div.eblock1{
+	top: 0;
+	left: 0;
+}
+
+div.eblock2{
+	top: 0;
+	left: 40px;
+}
+
+div.eblock3{
+	top: 0;
+	left: 80px;
+}
+
+div.eblock4{
+	top: 0;
+	left: 120px;
+}
+
+div.eblock5{
+	top: 40px;
+	left: 40px;
+}
+
+/*Block 6*/
+div.block6,
+div.block6>div{
+	width: 120px; 
+	height: 80px;
+}
+div.block6>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.r{
+	border: 20px ridge #F8C119;
+}
+
+div.rblock1{
+	top: 40px;
+	left: 0;
+}
+
+div.rblock2{
+	top: 40px;
+	left: 40px;
+}
+
+div.rblock3{
+	top: 40px;
+	left: 80px;
+}
+
+div.rblock4{
+	top: 0;
+	left: 80px;
+}
+
+/*Block 7*/
+div.block7,
+div.block7>div{
+	width: 80px; 
+	height: 120px;
+}
+div.block7>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.t{
+	border: 20px ridge #8350C1;
+}
+
+div.tblock1{
+	top: 0;
+	left: 0;
+}
+
+div.tblock2{
+	top: 40px;
+	left: 0;
+}
+
+div.tblock3{
+	top: 80px;
+	left: 0;
+}
+
+div.tblock4{
+	top: 80px;
+	left: 40px;
+}
+
+/*Block 8*/
+div.block8,
+div.block8>div{
+	width: 40px; 
+	height: 40px;
+}
+div.block8>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.u{
+	border: 20px ridge #222222;
+}
+
+div.ublock1{
+	top: 0;
+	left: 0;
+}
+
+/*Block 9*/
+div.block9,
+div.block9>div{
+	width: 80px; 
+	height: 80px;
+}
+div.block9>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.i{
+	border: 20px ridge #F65151;
+}
+
+div.iblock1{
+	top: 0;
+	left: 0;
+}
+
+div.iblock2{
+	top: 0;
+	left: 40px;
+}
+
+div.iblock3{
+	top: 40px;
+	left: 40px;
+}
+
+/*Block 10*/
+div.block10,
+div.block10>div{
+	width: 160px; 
+	height: 40px;
+}
+div.block10>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.o{
+	border: 20px ridge #E5E3DE;
+}
+
+div.oblock1{
+	top: 0;
+	left: 0;
+}
+
+div.oblock2{
+	top: 0;
+	left: 40px;
+}
+
+div.oblock3{
+	top: 0;
+	left: 80px;
+}
+
+div.oblock4{
+	top: 0;
+	left: 120px;
+}
+
+/*Block 11*/
+div.block11,
+div.block11>div{
+	width: 120px; 
+	height: 120px;
+}
+div.block11>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.p{
+	border: 20px ridge #2DA28F;
+}
+
+div.pblock1{
+	top: 0;
+	left: 0;
+}
+
+div.pblock2{
+	top: 0;
+	left: 40px;
+}
+
+div.pblock3{
+	top: 40px;
+	left: 0;
+}
+
+div.pblock4{
+	top: 80px;
+	left: 0;
+}
+
+div.pblock5{
+	top: 80px;
+	left: 40px;
+}
+
+div.pblock6{
+	top: 80px;
+	left: 80px;
+}
+
+/*Block 12*/
+div.block12,
+div.block12>div{
+	width: 40px; 
+	height: 120px;
+}
+div.block12>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.a{
+	border: 20px ridge #043D5D;
+}
+
+div.ablock1{
+	top: 0;
+	left: 0;
+}
+
+div.ablock2{
+	top: 40px;
+	left: 0;
+}
+
+div.ablock3{
+	top: 80px;
+	left: 0;
+}
+
+/*Block 13*/
+div.block13,
+div.block13>div{
+	width: 160px; 
+	height: 40px;
+}
+div.block13>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.s{
+	border: 20px ridge #E547B8;
+}
+
+div.sblock1{
+	top: 0;
+	left: 0;
+}
+
+div.sblock2{
+	top: 0;
+	left: 40px;
+}
+
+div.sblock3{
+	top: 0;
+	left: 80px;
+}
+
+div.sblock4{
+	top: 0;
+	left: 120px;
+}
+
+/*Block 14*/
+div.block14,
+div.block14>div{
+	width: 80px; 
+	height: 120px;
+}
+div.block14>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.d{
+	border: 20px ridge #F7F709;
+}
+
+div.dblock1{
+	top: 0;
+	left: 0;
+}
+
+div.dblock2{
+	top: 0;
+	left: 40px;
+}
+
+div.dblock3{
+	top: 40px;
+	left: 40px;
+}
+
+div.dblock4{
+	top: 80px;
+	left: 40px;
+}
+
+/*Block 15*/
+div.block15,
+div.block15>div{
+	width: 120px; 
+	height: 120px;
+}
+div.block15>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.f{
+	border: 20px ridge #B7D5F7;
+}
+
+div.fblock1{
+	top: 0;
+	left: 40px;
+}
+
+div.fblock2{
+	top: 40px;
+	left: 40px;
+}
+
+div.fblock3{
+	top: 80px;
+	left: 40px;
+}
+
+div.fblock4{
+	top: 80px;
+	left: 0;
+}
+
+div.fblock5{
+	top: 80px;
+	left: 80px;
+}
+
+/*Block 16*/
+div.block16,
+div.block16>div{
+	width: 120px; 
+	height: 80px;
+}
+div.block16>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.g{
+	border: 20px ridge #B3E5B3;
+}
+
+div.gblock1{
+	top: 0;
+	left: 40px;
+}
+
+div.gblock2{
+	top: 40px;
+	left: 0;
+}
+
+div.gblock3{
+	top: 40px;
+	left: 40px;
+}
+
+div.gblock4{
+	top: 40px;
+	left: 80px;
+}
+
+/*Block 17*/
+div.block17,
+div.block17>div{
+	width: 40px; 
+	height: 80px;
+}
+div.block17>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.h{
+	border: 20px ridge #38B8C4;
+}
+
+div.hblock1{
+	top: 0;
+	left: 0;
+}
+
+div.hblock2{
+	top: 40px;
+	left: 0;
+}
+
+/*Block 18*/
+div.block18,
+div.block18>div{
+	width: 120px; 
+	height: 40px;
+}
+div.block18>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.j{
+	border: 20px ridge #AA2525;
+}
+
+div.jblock1{
+	top: 0;
+	left: 0;
+}
+
+div.jblock2{
+	top: 0;
+	left: 40px;
+}
+
+div.jblock3{
+	top: 0;
+	left: 80px;
+}
+
+/*Block 19*/
+div.block19,
+div.block19>div{
+	width: 160px; 
+	height: 80px;
+}
+div.block19>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.k{
+	border: 20px ridge #0DA52B;
+}
+
+div.kblock1{
+	top: 0;
+	left: 0;
+}
+
+div.kblock2{
+	top: 0;
+	left: 40px;
+}
+
+div.kblock3{
+	top: 40px;
+	left: 40px;
+}
+
+div.kblock4{
+	top: 40px;
+	left: 80px;
+}
+
+div.kblock5{
+	top: 40px;
+	left: 120px;
+}
+
+/*Block 20*/
+div.block20,
+div.block20>div{
+	width: 200px; 
+	height: 80px;
+}
+div.block20>div{
+	top: 0px;
+	left: 0px;
+	position: absolute;
+}
+
+.l{
+	border: 20px ridge #E5148E;
+}
+
+div.lblock1{
+	top: 0;
+	left: 80px;
+}
+
+div.lblock2{
+	top: 40px;
+	left: 0;
+}
+
+div.lblock3{
+	top: 40px;
+	left: 40px;
+}
+
+div.lblock4{
+	top: 40px;
+	left: 80px;
+}
+
+div.lblock5{
+	top: 40px;
+	left: 120px;
+}
+
+div.lblock6{
+	top: 40px;
+	left: 160px;
+}

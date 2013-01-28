@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Block Puzzle</title>
+    <link rel="stylesheet" href="style.css"/>
+  </head>
+  <body>
+	<div class="menu-wrapper">
+		<div class="menu">
+			<div class="headers-wrapper">
+				<h2>Block Puzzle</h2>
+				<h4>Arrange the puzzle shapes to fill big blocks.</h4>
+			</div>
+			<div class="level"><a href="#" data-level="div.game.level1">level 1 (4*3)</a></div>
+			<div class="level"><a href="#" data-level="div.game.level2">level 2 (8*4)</a></div>
+			<div class="level"><a href="#" data-level="div.game.level3">level 3 (5*5)</a></div>
+			<div class="level"><a href="#" data-level="div.game.level5">level 4 (6*6)</a></div>
+		</div>
+	</div>
+	<div class="game-wrapper">
+	
+		<!-- Level 1 !-->
+	
+		<div class="game level1">
+			<div class="game-area">
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+			</div>
+			
+			<div class="block-wrapper">
+				<div class="block block1">
+					<div id="drag11" class="draggable" data-block="block1" data-level="level1">
+						<div class="c cblock1">
+						</div>
+						<div class="c cblock2">
+						</div>
+						<div class="c cblock3">
+						</div>
+						<div class="c cblock4">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block4">
+					<div id="drag14" class="draggable" data-block="block4" data-level="level1">
+						<div class="b bblock1">
+						</div>
+						<div class="b bblock2">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block2">
+					<div id="drag12" class="draggable" data-block="block2" data-level="level1">
+						<div class="q qblock1">
+						</div>
+						<div class="q qblock2">
+						</div>
+						<div class="q qblock3">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block3">
+					<div id="drag13" class="draggable" data-block="block3" data-level="level1">
+						<div class="w wblock1">
+						</div>
+						<div class="w wblock2">
+						</div>
+						<div class="w wblock3">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- Level 2 !-->
+	
+		<div class="game level2">
+			<div class="game-area">
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+			</div>
+			
+			<div class="block-wrapper">
+				<div class="block block14">
+					<div id="drag214" class="draggable" data-block="block14" data-level="level2">
+						<div class="d dblock1">
+						</div>
+						<div class="d dblock2">
+						</div>
+						<div class="d dblock3">
+						</div>
+						<div class="d dblock4">
+						</div>
+					</div>
+				</div>
+			
+				<div class="block block13">
+					<div id="drag213" class="draggable" data-block="block13" data-level="level2">
+						<div class="s sblock1">
+						</div>
+						<div class="s sblock2">
+						</div>
+						<div class="s sblock3">
+						</div>
+						<div class="s sblock4">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block17">
+					<div id="drag217" class="draggable" data-block="block17" data-level="level2">
+						<div class="h hblock1">
+						</div>
+						<div class="h hblock2">
+						</div>
+					</div>
+				</div>
+					
+				<div class="block block15">
+					<div id="drag215" class="draggable" data-block="block15" data-level="level2">
+						<div class="f fblock1">
+						</div>
+						<div class="f fblock2">
+						</div>
+						<div class="f fblock3">
+						</div>
+						<div class="f fblock4">
+						</div>
+						<div class="f fblock5">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block12">
+					<div id="drag212" class="draggable" data-block="block12" data-level="level2">
+						<div class="a ablock1">
+						</div>
+						<div class="a ablock2">
+						</div>
+						<div class="a ablock3">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block2">
+					<div id="drag22" class="draggable" data-block="block2" data-level="level2">
+						<div class="q qblock1">
+						</div>
+						<div class="q qblock2">
+						</div>
+						<div class="q qblock3">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block16">
+					<div id="drag216" class="draggable" data-block="block16" data-level="level2">
+						<div class="g gblock1">
+						</div>
+						<div class="g gblock2">
+						</div>
+						<div class="g gblock3">
+						</div>
+						<div class="g gblock4">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block5">
+					<div id="drag25" class="draggable" data-block="block5" data-level="level2">
+						<div class="e eblock1">
+						</div>
+						<div class="e eblock2">
+						</div>
+						<div class="e eblock3">
+						</div>
+						<div class="e eblock4">
+						</div>
+						<div class="e eblock5">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block4">
+					<div id="drag24" class="draggable" data-block="block4" data-level="level2">
+						<div class="b bblock1">
+						</div>
+						<div class="b bblock2">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	
+		<!-- Level 3 !-->
+		<div class="game level3">
+			<div class="game-area">
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>	
+			</div>
+			
+			<div class="block-wrapper">		
+				<div class="block block18">
+					<div id="drag318" class="draggable" data-block="block18" data-level="level3">
+						<div class="j jblock1">
+						</div>
+						<div class="j jblock2">
+						</div>
+						<div class="j jblock3">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block8">
+					<div id="drag38" class="draggable" data-block="block8" data-level="level3">
+						<div class="u ublock1">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block6">
+					<div id="drag36" class="draggable" data-block="block6" data-level="level3">
+						<div class="r rblock1">
+						</div>
+						<div class="r rblock2">
+						</div>
+						<div class="r rblock3">
+						</div>
+						<div class="r rblock4">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block2">
+					<div id="drag32" class="draggable" data-block="block2" data-level="level3">
+						<div class="q qblock1">
+						</div>
+						<div class="q qblock2">
+						</div>
+						<div class="q qblock3">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block19">
+					<div id="drag319" class="draggable" data-block="block19" data-level="level3">
+						<div class="k kblock1">
+						</div>
+						<div class="k kblock2">
+						</div>
+						<div class="k kblock3">
+						</div>
+						<div class="k kblock4">
+						</div>
+						<div class="k kblock5">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block20">
+					<div id="drag320" class="draggable" data-block="block20" data-level="level3">
+						<div class="l lblock1">
+						</div>
+						<div class="l lblock2">
+						</div>
+						<div class="l lblock3">
+						</div>
+						<div class="l lblock4">
+						</div>
+						<div class="l lblock5">
+						</div>
+						<div class="l lblock6">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block3">
+					<div id="drag33" class="draggable" data-block="block3" data-level="level3">
+						<div class="w wblock1">
+						</div>
+						<div class="w wblock2">
+						</div>
+						<div class="w wblock3">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	
+		<!-- There is no level 4 ;( !-->
+	
+		<!-- Level 5 !-->
+		<div class="game level5">
+			<div class="game-area">
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+				<div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div><div class="y"></div>
+			</div>
+			
+			<div class="block-wrapper">	
+				<div class="block block3">
+					<div id="drag53" class="draggable" data-block="block3" data-level="level5">
+						<div class="w wblock1">
+						</div>
+						<div class="w wblock2">
+						</div>
+						<div class="w wblock3">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block5">
+					<div id="drag55" class="draggable" data-block="block5" data-level="level5">
+						<div class="e eblock1">
+						</div>
+						<div class="e eblock2">
+						</div>
+						<div class="e eblock3">
+						</div>
+						<div class="e eblock4">
+						</div>
+						<div class="e eblock5">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block6">
+					<div id="drag56" class="draggable" data-block="block6" data-level="level5">
+						<div class="r rblock1">
+						</div>
+						<div class="r rblock2">
+						</div>
+						<div class="r rblock3">
+						</div>
+						<div class="r rblock4">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block8">
+					<div id="drag58" class="draggable" data-block="block8" data-level="level5">
+						<div class="u ublock1">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block2">
+					<div id="drag52" class="draggable" data-block="block2" data-level="level5">
+						<div class="q qblock1">
+						</div>
+						<div class="q qblock2">
+						</div>
+						<div class="q qblock3">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block9">
+					<div id="drag59" class="draggable" data-block="block9" data-level="level5">
+						<div class="i iblock1">
+						</div>
+						<div class="i iblock2">
+						</div>
+						<div class="i iblock3">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block10">
+					<div id="drag510" class="draggable" data-block="block10" data-level="level5">
+						<div class="o oblock1">
+						</div>
+						<div class="o oblock2">
+						</div>
+						<div class="o oblock3">
+						</div>
+						<div class="o oblock4">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block7">
+					<div id="drag57" class="draggable" data-block="block7" data-level="level5">
+						<div class="t tblock1">
+						</div>
+						<div class="t tblock2">
+						</div>
+						<div class="t tblock3">
+						</div>
+						<div class="t tblock4">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block11">
+					<div id="drag511" class="draggable" data-block="block11" data-level="level5">
+						<div class="p pblock1">
+						</div>
+						<div class="p pblock2">
+						</div>
+						<div class="p pblock3">
+						</div>
+						<div class="p pblock4">
+						</div>
+						<div class="p pblock5">
+						</div>
+						<div class="p pblock6">
+						</div>
+					</div>
+				</div>
+				
+				<div class="block block12">
+					<div id="drag512" class="draggable" data-block="block12" data-level="level5">
+						<div class="a ablock1">
+						</div>
+						<div class="a ablock2">
+						</div>
+						<div class="a ablock3">
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="blockPuzzle.js"></script>
+    <script type="text/javascript">
+	$(document).ready(function (){
+		var lvl1 = {
+				map: [
+					[0,0,0,0],
+					[0,0,0,0],
+					[0,0,0,0]
+					],
+				blocks: [1,4,2,3],
+				scope: $('div.game.level1')
+			},
+			lvl2 = {
+				map: [
+					[0,0,0,0,0,0,0,0],
+					[0,0,0,0,0,0,0,0],
+					[0,0,0,0,0,0,0,0],
+					[0,0,0,0,0,0,0,0]
+					],
+				blocks: [13,4,14,15,2,16,5,17,12],
+				scope: $('div.game.level2')
+			},
+			lvl3 = {
+				map: [
+					[0,0,0,0,0],
+					[0,0,0,0,0],
+					[0,0,0,0,0],
+					[0,0,0,0,0],
+					[0,0,0,0,0]
+					],
+				blocks: [18,8,6,2,19,20,3],
+				scope: $('div.game.level3')
+			},
+			lvl5 = {
+				map: [
+					[0,0,0,0,0,0],
+					[0,0,0,0,0,0],
+					[0,0,0,0,0,0],
+					[0,0,0,0,0,0],
+					[0,0,0,0,0,0],
+					[0,0,0,0,0,0]
+					],
+				blocks: [3,5,6,7,8,2,9,10,11,12],
+				scope: $('div.game.level5')
+			};
+		  
+		var levels = [lvl1,lvl2,lvl3,lvl5];  
+		  
+		blockPuzzle.init(levels);
+		
+		$.each($('div.menu-wrapper>.menu>.level>a'), function( key, value ){
+			$(value).click(function(event){
+				event.preventDefault();
+                $('html, body').animate({
+                    scrollTop: $($(this).data('level')).offset().top
+                }, 2000);
+			})
+		});
+	});
+    </script>
+  </body>
+</html>
